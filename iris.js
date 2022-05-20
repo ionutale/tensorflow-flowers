@@ -45,14 +45,14 @@ model.fit(trainingData, outputData, {epochs: 100})
   .then(async (history) => {
     // console.log(history)
     model.predict(testingData).print()
-    model.setUserDefinedMetadata({
-      "trainingTime": Date.now() - startTime,
-      "trainingEpochs": history.epoch,
-      "trainingLoss": history.history.loss[0],
-      "trainingAccuracy": history.history.acc[0],
-      "model": "iris-model",
-      name: "iris-model",
-    })
+    // model.setUserDefinedMetadata({
+    //   "trainingTime": Date.now() - startTime,
+    //   "trainingEpochs": history.epoch,
+    //   // "trainingLoss": history.history.loss[0],
+    //   // "trainingAccuracy": history.history.acc[0],
+    //   "model": "iris-model",
+    //   name: "iris-model",
+    // })
     await model.save(`file://${__dirname}/models`, {
       saveWeights: true,
       saveBiases: true,
