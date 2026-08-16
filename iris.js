@@ -1,5 +1,5 @@
 // const * as tf = require("@tensorflow/tfjs")
-const tf  = require("@tensorflow/tfjs-node")
+const tf  = require("@tensorflow/tfjs")
 const iris = require("./models/iris.json")
 const irisTesting = require("./models/iris-testing.json")
 
